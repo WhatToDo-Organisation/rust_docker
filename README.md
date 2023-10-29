@@ -1,4 +1,4 @@
-# README for Rust Docker setup for M1 Macs
+# Rust Docker setup for M1 Macs
 
 Running Rust applications with Diesel on M1 Macs can be challenging due to missing necessary libraries. This repository offers a Docker solution to seamlessly run your Rust applications, ensuring compatibility and ease of setup.
 
