@@ -9,6 +9,8 @@ RUN apt-get update && \
 
 RUN cargo install diesel_cli --no-default-features --features postgres
 
+RUN rustup component add clippy
+
 # Copy your custom .zshrc file into the container
 COPY .zshrc /root/.zshrc
 
