@@ -1,5 +1,5 @@
 # Use the specified Rust version
-FROM rust:1.70
+FROM rust:1.74
 
 # Install zsh and other necessary tools
 RUN apt-get update && \
