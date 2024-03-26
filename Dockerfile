@@ -9,6 +9,10 @@ RUN apt-get update && \
 
 RUN cargo install diesel_cli --no-default-features --features postgres
 
+# Install Dioxus CLI
+RUN cargo install dioxus-cli@0.5.0-alpha.2
+RUN rustup target add wasm32-unknown-unknown
+
 RUN rustup component add clippy
 
 # Copy your custom .zshrc file into the container
