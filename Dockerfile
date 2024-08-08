@@ -1,5 +1,5 @@
 # Use the specified Rust version
-FROM rust:1.74
+FROM rust:latest
 
 # Install zsh and other necessary tools
 RUN apt-get update && \
@@ -8,10 +8,6 @@ RUN apt-get update && \
     chsh -s $(which zsh)
 
 RUN cargo install diesel_cli --no-default-features --features postgres
-
-# Install Dioxus CLI
-RUN cargo install dioxus-cli@0.5.0-alpha.2
-RUN rustup target add wasm32-unknown-unknown
 
 RUN rustup component add clippy
 
